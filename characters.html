@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters | Heqtal Games</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="menu-container">
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開閉する">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- スライドインするメニュー一覧 -->
+        <nav class="slide-menu" id="slideMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+            </ul>
+        </nav>
+
+        <!-- メニュー展開時に背景を暗くするオーバーレイ（クリックで閉じる用） -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </div>
+<!-- ヘッダー / タイトルエリア -->
+<header class="site-header">
+        <a href="index.html" class="header-link">
+            <h1>Heqtal Games</h1>
+        </a>
+</header>
+
+<main class="wrapper characters-page">
+
+    <section class="characters-intro">
+        <h2>characters</h2>
+        <p>オリジナルキャラクターの設定をまとめています。</p>
+    </section>
+
+
+        <!-- ホームへ戻るボタン -->
+        <div class="back-home-container">
+            <a href="index.html" class="back-home">
+                <span class="back-home-text">← BACK TO HOME</span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p>&copy; 2026 heqtal All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS (ハンバーガーメニュー制御) -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const slideMenu = document.getElementById('slideMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            hamburgerBtn.classList.toggle('active');
+            slideMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+        slideMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+
+    
+</body>
+</html>
+
+
+
+<!--
+-Secret Path Seeker-
+ニコNico
+謎多き存在。
+Secret Path Seekerへのリンク
+
+ーSpooky Nightmareー
+エイミー Amy
+飼い猫。普段はどこにでもよくいる普通の猫だが、夢の世界では魔法少女の姿になれる。
+
+メグ Meg
+絵を描くのが好きな少女。エイミーの飼い主。オリキャラの漫画を作るのが夢。
+
+Mr. Hollowing
+カボチャ頭のモンスター。紳士的だが残酷な一面もある。
+
+Spooky Nightmareへのリンク
+
+ーAcorn Collectorー
+タロウ Taro
+葉っぱの妖精の少年。母親と一緒に森で雑貨屋を開いている。
+
+ハナ Hana
+タロウの母親。
+Acorn Collectorへのリンク
+
+-->

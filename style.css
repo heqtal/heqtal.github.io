@@ -1,0 +1,1058 @@
+
+/* =========================
+   Color Palette
+========================= */
+
+:root {
+    --blue: #3932fd;
+    --blue-dark: #1f23d3;
+    --black: #252525;
+    --white: hsl(0, 0%, 89%);
+    --gray: #aca9b5;
+    --gray-dark: #555457;
+    --light-gray: #c3bee4;
+}
+
+/* =========================
+   基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: "Space Grotesk", "Noto Sans JP", sans-serif;
+    
+    line-height: 1.8;
+
+    /* 背景グリッド */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.3) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.3) 1px,
+            transparent 1px
+        );
+
+    background-size: 30px 30px;
+}
+
+/* リンク */
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--black);
+}
+/* 通常の文章 */
+body {
+    font-family: "Space Grotesk", "Noto Sans JP", sans-serif;
+}
+
+/* 英語のタイトル・見出し */
+.site-header h1,
+.works-intro h2,
+section h2 {
+    font-family: "Orbitron", "Noto Sans JP", sans-serif;
+}
+
+/* ゲームタイトル */
+.game-info h3 {
+    font-family: "Orbitron", "Noto Sans JP", sans-serif;
+    font-weight: 800;
+}
+
+/* 小さな英語表記 */
+.game-status,
+.filter-section h3,
+.site-footer {
+    font-family: "Orbitron", "Noto Sans JP", sans-serif;
+}
+
+/* 大きな英語タイトル */
+.site-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+/* セクション見出し */
+section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* 本文 */
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+/* 数字・コード表記 */
+.game-status {
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+
+.site-header {
+    background-color: var(--black);
+    color: white;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    border-bottom: 5px solid var(--blue);
+}
+
+.header-link {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.header-link:hover {
+    background-color: rgb(57, 50, 253); /* ホバー時にうっすら青く光る演出（お好みで） */
+    color: white;
+}
+
+.site-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 36px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.site-header p {
+    margin: 5px 0 0;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+/* =========================
+   メインコンテンツ
+========================= */
+
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* メインビジュアル */
+
+.hero {
+    margin-bottom: 50px;
+    text-align: center;
+    border: 2px solid var(--black);
+    background-color: var(--black);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   各セクション共通
+========================= */
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--blue);
+    font-family: "Orbitron", sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--black);
+}
+
+section h2::before {
+    content: "";
+    display: block;
+
+    width: 12px;
+    height: 25px;
+
+    background: var(--blue);
+}
+
+section h2 {
+    color: var(--blue);
+    font-size: 27px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   About / ナビゲーション
+========================= */
+
+.about-section {
+    background-color: white;
+    padding: 25px;
+    position: relative;
+}
+
+.anchor-nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.anchor-nav li a {
+    display: block;
+    background-color: var(--black);
+    color: white;
+    padding: 8px 12px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.anchor-nav li a:hover {
+    background-color: var(--blue);
+}
+
+/* =========================
+   カード
+========================= */
+
+.work-card,
+.chara-card,
+.guideline {
+    display: block;
+    background-color: white;
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.work-card:hover,
+.chara-card:hover,
+.guideline:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-4px);
+}
+
+.work-card h3,
+.chara-card h3,
+.guideline h3 {
+    margin: 0;
+    color: var(--blue);
+}
+
+.work-card:hover h3,
+.chara-card:hover h3,
+.guideline:hover h3 {
+    color: white;
+}
+
+
+
+/* =========================
+   プロフィール・リンク
+========================= */
+
+.profile-and-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.author-profile,
+.sns-links {
+    background-color: white;
+    padding: 25px;
+
+}
+
+.author-profile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0;
+    border: 3px solid var(--blue);
+    border-radius: 60px;
+}
+
+.sns-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 横3列に配置 */
+    gap: 12px;
+}
+
+.sns-list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* 正方形にする */
+    background-color: var(--black); /* 黒背景 */
+    color: white;
+    padding: 15px;
+    border-left: none; /* 古い左ボーダーをリセット */
+    border: 2px solid var(--black);
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sns-list img {
+    width: 55px; /* アイコンのサイズ調整（お好みで変更可） */
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    filter: brightness(0) invert(1); /* 白いシルエット画像にするための保険（すでに白い画像ならそのままでもOKです） */
+}
+
+.sns-list span {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ホバー時の演出（青背景に変わり、少し浮き上がる） */
+.sns-list a:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   ガイドライン
+========================= */
+
+.guideline-container {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+
+/* =========================
+   フッター
+========================= */
+
+.site-footer {
+    background-color: var(--black);
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid var(--blue);
+    color: var(--gray);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   Works Page
+========================= */
+
+.works-page {
+    max-width: 1000px;
+}
+
+/* ページ紹介 */
+
+.works-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.works-intro h2 {
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+/* =========================
+   タグフィルター
+========================= */
+
+.filter-section {
+    background-color: white;
+    padding: 25px;
+
+    margin-bottom: 35px;
+}
+
+.filter-section h3 {
+    color: var(--blue);
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-tag {
+    background-color: white;
+    border: 1px solid var(--blue-dark);
+    border-radius: 3px;
+    color: var(--blue);
+    padding: 7px 15px;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.filter-tag:hover {
+    background-color: var(--blue);
+    color: white;
+    border-color: var(--blue);
+}
+
+.filter-tag.active {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: white;
+}
+
+.filter-result {
+    font-size: 12px;
+    color: var(--gray-dark);
+    margin-bottom: 0;
+}
+
+/* =========================
+   ゲームカード一覧
+========================= */
+
+.works-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    gap: 25px;
+}
+
+.game-card {
+    background-color: white;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.game-card:hover {
+    border: 4px solid var(--blue);
+    transform: translateY(-3px);
+}
+
+/* タグ検索時の非表示 */
+
+.game-card[hidden] {
+    display: none;
+}
+
+/* =========================
+   ゲームリンク
+========================= */
+
+.game-link {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    gap: 0;
+    color: var(--black);
+}
+
+.game-link:hover {
+    color: var(--black);
+}
+
+.game-link.no-link {
+    cursor: default;
+}
+
+.game-link.no-link:hover {
+    color: var(--black);
+}
+
+/* =========================
+   スライドショー
+========================= */
+
+.game-slideshow {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.game-slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.game-slideshow img.active {
+    opacity: 1;
+}
+
+/* =========================
+   ゲーム情報
+========================= */
+
+.game-info {
+    padding: 20px 25px;
+}
+
+.game-info h3 {
+    color: var(--blue);
+    font-size: 22px;
+    margin: 0 0 12px;
+}
+
+.game-info p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* 公開ステータス */
+
+.game-status {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+
+}
+
+.game-status.released {
+    background-color: var(--blue);
+    color: white;
+}
+
+.game-status.development {
+    background-color: var(--black);
+    color: white;
+    border-color: var(--blue);
+}
+
+.game-status.unavailable {
+    background-color: var(--light-gray);
+    color: var(--gray-dark);
+}
+
+/* =========================
+   ゲームタグ
+========================= */
+
+.game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 20px 15px;
+    
+}
+
+.game-tags span {
+    
+    color: var(--blue);
+    font-size: 12px;
+    padding: 3px 10px;
+    font-weight: bold;
+}
+
+/* =========================
+   ホームへ戻る
+========================= */
+.back-home-container {
+    text-align: center;
+    margin: 50px 0;
+}
+.back-home {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    color: var(--blue);
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    text-decoration: none;
+}
+
+
+.back-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+
+.back-home-text {
+    position: relative;
+    z-index: 1;
+}
+
+
+.back-home:hover {
+    color: white;
+}
+
+.back-home:hover::before {
+    transform: scaleX(1);
+}
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 650px) {
+
+    .wrapper {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .site-header h1 {
+        font-size: 25px;
+    }
+
+    .profile-and-links {
+        grid-template-columns: 1fr;
+    }
+
+    .anchor-nav ul {
+        flex-direction: column;
+    }
+
+    .anchor-nav li a {
+        text-align: center;
+    }
+
+    .game-link {
+        grid-template-columns: 1fr;
+    }
+
+    .game-info {
+        padding: 15px;
+    }
+
+    .game-info h3 {
+        font-size: 19px;
+    }
+
+    .game-tags {
+        padding: 0 15px 15px;
+    }
+
+    .filter-section {
+        padding: 18px;
+    }
+
+}
+/* =========================
+   Works View More
+========================= */
+
+.works-more {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.view-more {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+
+    color: var(--blue);
+    background-color: transparent;
+
+    border: 2px solid var(--blue);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+/* 左から広がる青い背景 */
+
+.view-more::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--blue);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+/* テキストを背景より手前に表示 */
+
+.view-more-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* ホバー時 */
+
+.view-more:hover {
+    color: white;
+}
+
+.view-more:hover::before {
+    transform: scaleX(1);
+}
+
+/* =========================
+   Works Image Slider
+========================= */
+
+.works-slider {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    background-color: var(--black);
+    padding: 10px 0;
+}
+
+.works-slider-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 10px;
+
+    animation: works-scroll 35s linear infinite;
+}
+
+.works-slider-track img {
+    display: block;
+
+    /* 画像サイズを固定 */
+    width: 220px !important;
+    height: 125px !important;
+    min-width: 220px;
+    max-width: 220px;
+
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* 自動スクロール */
+@keyframes works-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.works-slider {
+    position: relative;
+    border: 2px solid var(--black);
+}
+
+/* 上部の青いライン */
+.works-slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--blue);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 右上の装飾 */
+.works-slider::after {
+    content: "COLLECTION / 001";
+
+    position: absolute;
+    top: 8px;
+    right: 10px;
+
+    color: white;
+    background: var(--blue);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    padding: 3px 8px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.menu-container {
+    position: relative;
+    z-index: 1000;
+}
+
+/* ハンバーガーボタン本体（右上に固定） */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--black); /* 黒背景 */
+    border: 2px solid var(--black);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; /* 線の間隔 */
+    padding: 0;
+    z-index: 1002;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* 三本の白線 */
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white; /* 白線 */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.2s ease;
+}
+
+/* ボタンホバー時：背景と線が青に変わる */
+.hamburger:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+/* --- クリック時（×へ変形するアニメーション） --- */
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0; /* 真ん中の線を消す */
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- 右側から出てくるスライドメニュー --- */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* 普段は画面の外側に隠す */
+    width: 280px;
+    height: 100vh;
+    background-color: var(--black);
+    border-left: 3px solid var(--blue);
+    padding: 80px 40px 40px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); /* 滑らかなスライド */
+    z-index: 1001;
+}
+
+/* メニューが開いた時の状態 */
+.slide-menu.active {
+    right: 0;
+}
+
+/* メニュー内のリスト */
+.slide-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slide-menu li a {
+    display: block;
+    color: white; /* 普段は白線（白文字） */
+    font-family: "Orbitron", "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* メニュー内項目ホバー時：青色に変わり少し右に浮き出る */
+.slide-menu li a:hover {
+    color: var(--blue);
+    transform: translateX(6px);
+}
+
+/* --- オーバーレイ（背景の暗幕） --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.works-section h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--blue);
+    font-family: "Orbitron", sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--black);
+}
+/* =========================
+   Guidelines ページ専用スタイル
+========================= */
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-intro h2 {
+    font-family: "Orbitron", sans-serif;
+    color: var(--blue);
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+
+.guideline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.guideline-block {
+    background-color: white;
+    border: 2px solid var(--black);
+    padding: 30px;
+}
+
+.guideline-block h3 {
+    font-family: "Orbitron", sans-serif;
+    color: var(--blue);
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 8px;
+}
+
+.guideline-rule {
+    background-color: var(--white);
+    border-left: 4px solid var(--blue);
+    padding: 15px 20px;
+    margin-top: 15px;
+}
+
+.guideline-rule h4 {
+    margin: 15px 0 8px;
+    font-size: 14px;
+    color: var(--black);
+}
+
+.guideline-rule h4:first-child {
+    margin-top: 0;
+}
+
+.guideline-rule ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.guideline-rule li {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works | Heqtal Games</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="menu-container">
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開閉する">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- スライドインするメニュー一覧 -->
+        <nav class="slide-menu" id="slideMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+            </ul>
+        </nav>
+
+        <!-- メニュー展開時に背景を暗くするオーバーレイ（クリックで閉じる用） -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </div>
+<!-- ヘッダー / タイトルエリア -->
+<header class="site-header">
+        <a href="index.html" class="header-link">
+            <h1>Heqtal Games</h1>
+        </a>
+</header>
+
+<main class="wrapper works-page">
+
+    <section class="works-intro">
+        <h2>Works</h2>
+        <p>これまでに制作したゲームの一覧です。主にブラウザ上で無料で遊べます。</p>
+        <p>作品をクリックすると公開ページに飛びます。</p>
+    </section>
+
+    <!-- タグ検索 -->
+    <section class="filter-section">
+        <h3>Filter by Tags</h3>
+
+        <div class="tag-filters">
+            <button class="filter-tag active" data-filter="all">ALL</button>
+            <button class="filter-tag" data-filter="ドット絵">#ドット絵</button>
+            <button class="filter-tag" data-filter="furry">#furry</button>
+            <button class="filter-tag" data-filter="弾幕">#弾幕</button>
+            <button class="filter-tag" data-filter="ミニゲーム">#ミニゲーム</button>
+            <button class="filter-tag" data-filter="音ゲー">#音ゲー</button>
+            <button class="filter-tag" data-filter="ノベルゲーム">#ノベルゲーム</button>
+            <button class="filter-tag" data-filter="pride">#pride</button>
+            <button class="filter-tag" data-filter="未完成">#未完成</button>
+        </div>
+
+        <p class="filter-result" id="filter-result">
+            8作品を表示中
+        </p>
+    </section>
+
+    <!-- ゲーム一覧 -->
+    <section class="works-list">
+
+        <!-- Spooky Nightmare -->
+        <article class="game-card"
+            data-tags="ドット絵 furry 弾幕">
+
+            <a href="https://heqtal.itch.io/spooky-nightmare"
+               target="_blank" rel="noopener"
+               class="game-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/spooky_nightmare.png" alt="Spooky Nightmare">
+                    <img src="images/works/spooky_nightmare2.png" alt="Spooky Nightmare gameplay">
+                    <img src="images/works/spooky_nightmare3.png" alt="Spooky Nightmare gameplay">
+                </div>
+
+                <div class="game-info">
+                    <h3>Spooky Nightmare</h3>
+                    <p>飼い猫Amyが夢の世界で魔法少女に変身！？
+                    ハロウィンな雰囲気の横スクロールシューティングゲーム。</p>
+                    <span class="game-status released">RELEASED</span>
+                </div>
+            </a>
+
+            <div class="game-tags">
+                <span>#ドット絵</span>
+                <span>#furry</span>
+                <span>#弾幕</span>
+            </div>
+        </article>
+
+        <!-- Secret Path Seeker -->
+        <article class="game-card"
+            data-tags="ドット絵 furry ミニゲーム">
+
+            <a href="https://heqtal.itch.io/secret-path-seeker"
+               target="_blank" rel="noopener"
+               class="game-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/seecret_path_seeker.png" alt="Secret Path Seeker">
+                    <img src="images/works/seecret_path_seeker2.png" alt="Secret Path Seeker gameplay">
+                </div>
+
+                <div class="game-info">
+                    <h3>Secret Path Seeker</h3>
+                    <p>猫の少女が夜の街を駆け抜ける2Dランゲーム。</p>
+                    <span class="game-status released">RELEASED</span>
+                </div>
+            </a>
+
+            <div class="game-tags">
+                <span>#ドット絵</span>
+                <span>#furry</span>
+                <span>#ミニゲーム</span>
+            </div>
+        </article>
+
+        <!-- Pixel Wings -->
+        <article class="game-card"
+            data-tags="ドット絵 弾幕 未完成">
+
+            <div class="game-link no-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/pixel_wings.png" alt="Pixel Wings">
+                    <img src="images/works/pixel_wings2.png" alt="Pixel Wings gameplay">
+                    <img src="images/works/pixel_wings3.png" alt="Pixel Wings gameplay">
+                </div>
+
+                <div class="game-info">
+                    <h3>Pixel Wings</h3>
+                    <p>シンプルな縦スクロール弾幕STG。
+                    現在制作中！</p>
+                    <span class="game-status development">IN DEVELOPMENT</span>
+                </div>
+            </div>
+
+            <div class="game-tags">
+                <span>#ドット絵</span>
+                <span>#弾幕</span>
+                <span>#未完成</span>
+            </div>
+        </article>
+
+        <!-- Pixel Avatar Maker -->
+        <article class="game-card"
+            data-tags="ドット絵 ミニゲーム pride">
+
+            <a href="https://heqtal.itch.io/pixel-avatar-maker"
+               target="_blank" rel="noopener"
+               class="game-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/avater_maker.png" alt="Pixel Avatar Maker">
+                    <img src="images/works/avater_maker2.png" alt="Avatar Maker preview">
+                    <img src="images/works/avater_maker3.png" alt="Avatar Maker preview">
+                </div>
+
+                <div class="game-info">
+                    <h3>Pixel Avatar Maker ~ for trans masc character ~</h3>
+                    <p>アイテムを選んでオリジナルキャラクターを作ろう！</p>
+                    <span class="game-status released">RELEASED</span>
+                </div>
+            </a>
+
+            <div class="game-tags">
+                <span>#ドット絵</span>
+                <span>#ミニゲーム</span>
+                <span>#pride</span>
+            </div>
+        </article>
+
+        <!-- Acorn Collector -->
+        <article class="game-card"
+            data-tags="ドット絵 ミニゲーム">
+
+            <a href="https://heqtal.itch.io/acorn-collector"
+               target="_blank" rel="noopener"
+               class="game-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/acorn_collector.png" alt="Acorn Collector">
+                    <img src="images/works/acorn_collector2.png" alt="Acorn Collector gameplay">
+                    <img src="images/works/acorn_collector3.png" alt="Acorn Collector gameplay">
+                </div>
+
+                <div class="game-info">
+                    <h3>Acorn Collector</h3>
+                    <p>ブロック崩し × ローグライク！
+                    コインとどんぐりを集めよう！</p>
+                    <span class="game-status released">RELEASED</span>
+                </div>
+            </a>
+
+            <div class="game-tags">
+                <span>#ドット絵</span>
+                <span>#ミニゲーム</span>
+            </div>
+        </article>
+
+        <!-- Bee Flight -->
+        <article class="game-card"
+            data-tags="ドット絵 弾幕">
+
+            <a href="https://heqtal.itch.io/bee-flight"
+               target="_blank" rel="noopener"
+               class="game-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/bee_flight.png" alt="Bee Flight">
+                </div>
+
+                <div class="game-info">
+                    <h3>Bee Flight</h3>
+                    <p>ミツバチが主人公のシンプルな横スクロールシューティング。</p>
+                    <span class="game-status released">RELEASED</span>
+                </div>
+            </a>
+
+            <div class="game-tags">
+                <span>#ドット絵</span>
+                <span>#弾幕</span>
+            </div>
+        </article>
+
+        <!-- Floatune -->
+        <article class="game-card"
+            data-tags="音ゲー">
+
+            <a href="https://unityroom.com/games/floatune"
+               target="_blank" rel="noopener"
+               class="game-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/floatune.png" alt="Floatune">
+                    <img src="images/works/floatune2.png" alt="Floatune gameplay">
+                </div>
+
+                <div class="game-info">
+                    <h3>Floatune</h3>
+                    <p>オリジナルの音楽に合わせて攻撃を避けるリズムゲーム。</p>
+                    <span class="game-status released">RELEASED</span>
+                </div>
+            </a>
+
+            <div class="game-tags">
+                <span>#音ゲー</span>
+            </div>
+        </article>
+
+        <!-- 彼ピ・セラピー・タイピング -->
+        <article class="game-card"
+            data-tags="ノベルゲーム">
+
+            <div class="game-link no-link">
+
+                <div class="game-slideshow">
+                    <img src="images/works/piserapi.png" alt="彼ピ・セラピー・タイピング">
+                    <img src="images/works/piserapi2.png" alt="彼ピ・セラピー・タイピング preview">
+                </div>
+
+                <div class="game-info">
+                    <h3>彼ピ・セラピー・タイピング</h3>
+                    <p>メンヘラ女子を慰めるタイピングゲーム兼ビジュアルノベル。</p>
+                    <span class="game-status unavailable">NOT AVAILABLE</span>
+                </div>
+            </div>
+
+            <div class="game-tags">
+                <span>#ノベルゲーム</span>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="back-home-container">
+    <a href="index.html" class="back-home">
+        <span class="back-home-text">← BACK TO HOME</span>
+    </a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 heqtal All Rights Reserved.</p>
+</footer>
+
+
+<!-- スライドショー・タグ検索 -->
+<script>
+
+// =========================
+// スライドショー
+// =========================
+
+document.querySelectorAll(".game-slideshow").forEach(slideshow => {
+
+    const images = slideshow.querySelectorAll("img");
+
+    // 最初の画像を表示
+    images.forEach((img, index) => {
+        img.classList.toggle("active", index === 0);
+    });
+
+    // 画像が1枚だけなら終了
+    if (images.length <= 1) {
+        return;
+    }
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+
+        images[currentIndex].classList.remove("active");
+
+        currentIndex = (currentIndex + 1) % images.length;
+
+        images[currentIndex].classList.add("active");
+
+    }, 3500);
+
+});
+
+
+// =========================
+// ハッシュタグ検索
+// =========================
+
+const filterButtons = document.querySelectorAll(".filter-tag");
+const gameCards = document.querySelectorAll(".game-card");
+const resultText = document.getElementById("filter-result");
+
+let selectedTags = [];
+
+// タグボタンをクリック
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const tag = button.dataset.filter;
+
+        // ALLをクリックした場合
+        if (tag === "all") {
+
+            selectedTags = [];
+
+        } else {
+
+            // 選択済みなら解除
+            if (selectedTags.includes(tag)) {
+
+                selectedTags = selectedTags.filter(t => t !== tag);
+
+            } else {
+
+                selectedTags.push(tag);
+
+            }
+        }
+
+        updateFilter();
+
+    });
+
+});
+
+
+// 作品の表示・非表示を更新
+function updateFilter() {
+
+    let visibleCount = 0;
+
+    gameCards.forEach(card => {
+
+        const tags = card.dataset.tags.split(" ");
+
+        // 選択したタグをすべて持っているか判定
+        const matched = selectedTags.every(tag =>
+            tags.includes(tag)
+        );
+
+        card.hidden = !matched;
+
+        if (matched) {
+            visibleCount++;
+        }
+
+    });
+
+
+    // ボタンの選択状態を更新
+    filterButtons.forEach(button => {
+
+        const tag = button.dataset.filter;
+
+        if (tag === "all") {
+
+            button.classList.toggle("active", selectedTags.length === 0);
+
+        } else {
+
+            button.classList.toggle("active", selectedTags.includes(tag));
+
+        }
+
+    });
+
+
+    // 表示件数
+    resultText.textContent =
+        visibleCount + "作品を表示中";
+
+}
+
+</script>
+<script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const slideMenu = document.getElementById('slideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+        hamburgerBtn.classList.toggle('active');
+        slideMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    }
+
+    // ボタンクリックで開閉
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    // 背景の暗幕をクリックしてもメニューが閉じるようにする
+    menuOverlay.addEventListener('click', toggleMenu);
+
+    // メニュー内のリンクをクリックしたときもメニューを閉じる
+    const menuLinks = slideMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heqtal Games Official</title>
+    <!-- 共通のCSSファイルを読み込み -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-container">
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開閉する">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- スライドインするメニュー一覧 -->
+        <nav class="slide-menu" id="slideMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+            </ul>
+        </nav>
+
+        <!-- メニュー展開時に背景を暗くするオーバーレイ（クリックで閉じる用） -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </div>
+    <!-- ヘッダー / タイトルエリア -->
+    <header class="site-header">
+        <h1>Heqtal Games</h1>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="wrapper">
+
+        <!-- トップ画像（メインビジュアル） -->
+        <section class="hero">
+            <img src="images/header.png" alt="Heqtal Games メインビジュアル">
+        </section>
+
+        <!-- イントロ＆ページ内ナビゲーション（アンカーリンク） -->
+        <section class="about-section">
+            <h2>About</h2>
+            <p>
+                当サイトは、インディーゲームクリエイターheqtalに関する情報を公開しています。
+            </p>
+            <!-- ページ内ジャンプ用のメニューリスト -->
+            <nav class="anchor-nav">
+                <ul>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#characters">Characters</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#guideline">Guidelines</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="works" class="works-section">
+        <h2>01 / WORKS</h2>
+
+        <!-- 自動スクロールするゲーム画像 -->
+    <div class="works-slider">
+
+            <div class="works-slider-track">
+
+                <!-- 1周目 -->
+                <img src="images/works/spooky_nightmare.png" alt="">
+                <img src="images/works/seecret_path_seeker.png" alt="">
+                <img src="images/works/pixel_wings.png" alt="">
+                <img src="images/works/avater_maker.png" alt="">
+                <img src="images/works/acorn_collector.png" alt="">
+                <img src="images/works/bee_flight.png" alt="">
+
+                <!-- 2周目：シームレスに繰り返すための複製 -->
+                <img src="images/works/spooky_nightmare.png" alt="" aria-hidden="true">
+                <img src="images/works/seecret_path_seeker.png" alt="" aria-hidden="true">
+                <img src="images/works/pixel_wings.png" alt="" aria-hidden="true">
+                <img src="images/works/avater_maker.png" alt="" aria-hidden="true">
+                <img src="images/works/acorn_collector.png" alt="" aria-hidden="true">
+                <img src="images/works/bee_flight.png" alt="" aria-hidden="true">
+
+            </div>
+
+    </div>
+    <p>制作したオリジナルゲーム一覧です。</p>
+        <!-- View More -->
+        <div class="works-more">
+            <a href="works.html" class="view-more">
+                <span class="view-more-text">VIEW MORE →</span>
+            </a>
+        </div>
+
+        </section>
+
+        <section id="characters" class="chara-links">
+            <h2>02/ Characters</h2>
+            <div class="chara-card-container">
+                <a href="characters.html" class="chara-card">
+                    <h3>キャラクター紹介ページへ</h3>
+                </a>
+                <p>オリジナルキャラクターの詳細設定やイラストをまとめたページに飛びます</p>
+            </div>
+        </section>
+
+ 
+        <section class="profile-and-links">
+            <div id="profile" class="author-profile">
+                <h2>03/ Author</h2>
+                <p><strong>へくたる (heqtal)</strong></p>
+                <img src="images/heqtal_icon.png">
+                <p>イラストからBGMまでほぼ一人制作しています。ドット絵と弾幕が好き。taru,hekutR,へく田,Hectorなどハンドルネームに表記ゆれがありますが同一人物です。</p>
+            </div>
+
+            <div id="links" class="sns-links">
+                <h2>04/ Links</h2>
+                <ul class="sns-list">
+                    <li>
+                        <a href="https://heqtal.itch.io/" target="_blank" rel="noopener">
+                            <img src="images/links_icon/itch.png" alt="itch.io">
+                            <span>itch.io</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hekutaruland.blogspot.com/" target="_blank" rel="noopener">
+                            <img src="images/links_icon/blog.png" alt="Blog">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@hekutr6573" target="_blank" rel="noopener">
+                            <img src="images/links_icon/youtube2.png" alt="YouTube">
+                            <span>YouTube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/heqtal" target="_blank" rel="noopener">
+                            <img src="images/links_icon/x.png" alt="X">
+                            <span>X (Twitter)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bsky.app/profile/heqtal.bsky.social" target="_blank" rel="noopener">
+                            <img src="images/links_icon/bluesky.png" alt="Bluesky">
+                            <span>Bluesky</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="guideline" class="guideline-section">
+            <h2>05/ Guidelines</h2>
+            <div class="guideline-container">
+                <a href="guidelines.html" class="guideline">
+                    <h3>ガイドライン詳細</h3>
+                </a>
+                <p>ゲームの実況配信や二次創作をする際は必ず目を通してください。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p>&copy; 2026 heqtal All Rights Reserved.</p>
+    </footer>
+<script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const slideMenu = document.getElementById('slideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+        hamburgerBtn.classList.toggle('active');
+        slideMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    }
+
+    // ボタンクリックで開閉
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    // 背景の暗幕をクリックしてもメニューが閉じるようにする
+    menuOverlay.addEventListener('click', toggleMenu);
+
+    // メニュー内のリンクをクリックしたときもメニューを閉じる
+    const menuLinks = slideMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+</script>
+</body>
+</html>

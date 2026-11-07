@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidelines - Heqtal Games Official</title>
+    <!-- 共通CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ハンバーガーボタン ＆ メニュー -->
+    <div class="menu-container">
+        <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開閉する">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <nav class="slide-menu" id="slideMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </div>
+
+    <!-- ヘッダー（クリックでHomeに戻る） -->
+    <header class="site-header">
+        <a href="index.html" class="header-link">
+            <h1>Heqtal Games</h1>
+        </a>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="wrapper">
+
+        <!-- ページタイトル -->
+        <div class="page-intro">
+            <h2>GUIDELINES</h2>
+            <p>Heqtal Gamesが制作する作品のゲーム実況配信および二次創作に関するガイドラインです。</p>
+        </div>
+
+        <!-- ガイドライン本文エリア -->
+        <article class="guideline-content">
+
+            <!-- 前置き -->
+            <section class="guideline-block">
+                <p>
+                    heqtalが制作したゲームの実況動画やライブ配信、ファンアート（イラスト、文章、音楽アレンジ等）は基本的に自由に制作・公開していただけます！事前のご連絡や申請も不要です。<br>
+                    ゲームを遊んでいただいたり、二次創作を作っていただけるのは作者としても大変嬉しいです。公開する際は以下のガイドラインに目を通しておいてください！
+                </p>
+            </section>
+
+            <!-- 01. 実況・動画配信 -->
+            <section class="guideline-block">
+                <h3>01 / ゲーム実況・動画配信について</h3>
+                <p>個人・法人を問わず、実況動画の投稿およびライブ配信を歓迎しています。</p>
+
+                <div class="guideline-rule">
+                    <h4>【許可している事項】</h4>
+                    <ul>
+                        <li>YouTube、Twitch、ニコニコ動画等での実況動画投稿・ライブ配信</li>
+                        <li>動画配信プラットフォームが提供する標準的な収益化機能（広告収益・スーパーチャット等の投げ銭）の利用</li>
+                    </ul>
+
+                    <h4>【お願い・注意事項】</h4>
+                    <ul>
+                        <li>動画の概要欄などに、作品名（ゲームタイトル）または作品ページのURLを明記していただけると助かります。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 02. 二次創作・ファンアート -->
+            <section class="guideline-block">
+                <h3>02 / 二次創作・ファンアートについて</h3>
+                <p>キャラクターや世界観を元にしたイラスト、文章、音楽アレンジ、コスプレなどの非営利目的（同人活動の範囲）での創作活動を歓迎します。</p>
+
+                <div class="guideline-rule">
+                    <h4>【許可している事項】</h4>
+                    <ul>
+                        <li>SNS等でのファンアート・二次創作の投稿および公開</li>
+                        <li>同人誌等の有料での頒布（非商業・趣味の範囲内）</li>
+                        <li>Skebやpixivリクエスト等の有償リクエストサービスを利用した、heqtal作品キャラクターのイラスト等の制作依頼・受託</li>
+                        <li>FANBOXやPatreon等のサービスにおける、有料メンバー限定でのファンアート公開</li>
+                    </ul>
+
+                    <h4>【制作時の注意事項】</h4>
+                    <ul>
+                        <li>キャラクターの名前や性別などを間違えないようにしてください。</li>
+                        <li>R-18 / NSFW（成人向け・残酷描写等）に該当する作品を投稿・公開する場合は、必ず適切な年齢制限やフィルタリングを設定してください。</li>
+                        <li>MODの制作・公開は可能ですが、公式コンテンツと誤解されないよう「非公式MODである」旨を明記してください。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 03. 禁止事項 -->
+            <section class="guideline-block">
+                <h3>03 / 禁止事項</h3>
+                <p>以下の行為は固く禁止いたします。</p>
+
+                <div class="guideline-rule">
+                    <ul>
+                        <li>
+                            <strong>内部データの解析・抽出・流用：</strong><br>
+                            ゲーム内で使用している画像・音声・プログラム等のアセットをデータ解析（デコンパイル・抽出し、素材として再配布・公開・単体再生動画として投稿する行為。フリー素材を利用している作品もあるため、素材提供元様へのご迷惑となりますので絶対にお止めください。
+                        </li>
+                        <li><strong>公式作品の有償販売・単体販売：</strong> ゲーム本体およびゲームデータを許可なく有料で販売する行為。</li>
+                        <li><strong>公式と誤認させる表現：</strong> 公式作品であるかのように偽って情報発信や販売を行う行為。</li>
+                        <li><strong>著しいイメージ破壊・公序良俗違反：</strong> 作品のイメージを著しく損なう形や、他者を中傷する目的での利用。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 04. 免責事項・お問い合わせ -->
+            <section class="guideline-block">
+                <h3>04 / 免責事項・お問い合わせ</h3>
+                <p>
+                    本ガイドラインは予告なく変更・更新される場合があります。<br>
+                    当方のコンテンツを利用・参照して発生したいかなる損害やトラブルについても、当方は一切の責任を負いかねますのであらかじめご了承ください。
+                </p>
+                <p style="margin-top: 15px;">
+                    その他、ガイドラインに関して気になる点がありましたら、<a href="index.html#links" style="color: var(--blue); text-decoration: underline;">Linksセクション</a>のX,Bluesky,blogから、もしくは下記のお問い合わせフォームからお気軽にご連絡ください。
+                </p>
+                <p style="text-align: right; font-size: 12px; color: var(--gray-dark); margin-top: 20px;">
+                    制定日：2026年11月
+                </p>
+            </section>
+
+        </article>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexbUlwS-fqSOQIVJeoryS_IbBxQzFkWcs3hMFNKZPpH-ge3g/viewform?embedded=true" width="640" height="787" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+
+
+
+        <!-- ホームへ戻るボタン -->
+        <div class="back-home-container">
+            <a href="index.html" class="back-home">
+                <span class="back-home-text">← BACK TO HOME</span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p>&copy; 2026 heqtal All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS (ハンバーガーメニュー制御) -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const slideMenu = document.getElementById('slideMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            hamburgerBtn.classList.toggle('active');
+            slideMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+        slideMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+
+    
+</body>
+</html>
